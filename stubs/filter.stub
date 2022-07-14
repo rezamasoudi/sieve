@@ -1,0 +1,21 @@
+<?php
+
+namespace {{ namespace }};
+
+use Masoudi\Sieve\Filter;
+use Illuminate\Http\Request;
+use Illuminate\Database\Eloquent\Model;
+
+class {{ class }} extends Filter
+{
+    /**
+     * Apply conditions on model
+     * 
+     * @param Illuminate\Http\Request $request;
+     * @param Illuminate\Database\Eloquent\Model $model;
+     */
+    public function filter(Request $request, Model $model)
+    {
+       // return $model->where("field", "value");
+    }
+}

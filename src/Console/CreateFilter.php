@@ -35,7 +35,7 @@ class CreateFilter extends GeneratorCommand
     function getArguments()
     {
         return [
-            ['name', InputArgument::REQUIRED, 'The name of the filte rclass.'],
+            ['name', InputArgument::REQUIRED, 'The name of the filter class.'],
         ];
     }
 }

@@ -14,7 +14,7 @@ The Sieve is a Laravel framework package to create query filters much more easy 
 install package with [Composer](https://getcomposer.org/)
 
 ```shell
-composer install masoudi/laravel-sieve
+composer require masoudi/laravel-sieve
 ```
 
 ## Create A filter
@@ -28,6 +28,8 @@ php artisan make:filter IndexPostsFilter
 Filter will be create at <font color="#EC407A">app/Http/Filters</font> path.
 
 ```php
+use Masoudi\Sieve\Filter;
+
 class IndexPostsFilter extends Filter
 {
     /**
@@ -40,9 +42,9 @@ class IndexPostsFilter extends Filter
     {
        return $model->where("is_active", true)
                     ->where('published', true)
-                    ->whereHas('categories', function($query){
+                    ->whereHas('comments', function($query){
                         $query->where('slug', '=', $request->slug);
-                    }); // And much more
+                    });
     }
 }
 ```
@@ -60,5 +62,5 @@ class Post extends Filterable { }
 ## Add filters to model
 
 ```php
-User::filter(new IndexPostsFilter)->get();
+Post::filter(new IndexPostsFilter)->get();
 ```

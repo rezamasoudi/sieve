@@ -4,7 +4,12 @@
   "license": "MIT",
   "autoload": {
     "psr-4": {
-      "Masoudi\\Laravel\\Sieve\\": "src/"
+      "Masoudi\\Sieve\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Masoudi\\Sieve\\Tests\\": "tests/"
     }
   },
   "authors": [
@@ -13,9 +18,15 @@
       "email": "dev.masoudi@gmail.com"
     }
   ],
-  "archive": {
-    "exclude": [
-      "flow"
-    ]
+  "require-dev": {
+    "orchestra/testbench": "^6.0",
+    "phpunit/phpunit": "^9.5"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Masoudi\\Sieve\\SieveServiceProvider"
+      ]
+    }
   }
 }

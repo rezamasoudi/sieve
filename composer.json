@@ -1,0 +1,21 @@
+{
+  "name": "masoudi/laravel-sieve",
+  "description": "A Laravel package to create better query filters",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Masoudi\\Laravel\\Sieve\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Masoudi",
+      "email": "dev.masoudi@gmail.com"
+    }
+  ],
+  "archive": {
+    "exclude": [
+      "flow"
+    ]
+  }
+}

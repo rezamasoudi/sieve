@@ -1,6 +1,9 @@
-# Laravel Sieve 🧑🏾‍💻 🔍 🙂
+# Laravel Sieve
 
 The Sieve is a Laravel framework package to create query filters much more easy and clean.
+
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/masoudi/laravel-sieve.svg?style=flat-square)](https://packagist.org/packages/masoudi/laravel-sieve)
+[![Total Downloads](https://img.shields.io/packagist/dt/masoudi/laravel-sieve.svg?style=flat-square)](https://packagist.org/packages/masoudi/laravel-sieve)
 
 ### How to use
 

@@ -37,17 +37,21 @@ class IndexPostsFilter extends Filter
 {
     /**
      * Apply conditions on model
-     *
-     * @param Illuminate\Http\Request $request;
-     * @param Illuminate\Database\Eloquent\Model $model;
+     * 
+     * @param \Illuminate\Http\Request $request
+     * @param \Illuminate\Database\Query\Builder $builder
+     * 
+     * @return \Illuminate\Database\Query\Builder
      */
-    public function filter(Request $request, Model $model)
+    function filter(Request $request, Builder $builder)
     {
-       return $model->where("is_active", true)
-                    ->where('published', true)
-                    ->whereHas('comments', function($query){
-                        $query->where('slug', '=', $request->slug);
-                    });
+       $builder = $builder->where("is_active", true)
+            ->where('published', true)
+            ->whereHas('comments', function($query){
+                $query->where('slug', '=', $request->slug);
+            });
+            
+        return $builder;
     }
 }
 ```

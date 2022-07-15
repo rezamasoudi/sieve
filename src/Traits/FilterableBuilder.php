@@ -19,7 +19,7 @@ trait FilterableBuilder
         $query = $filter->filter($request, $this->model);
 
         if (!$query instanceof Builder) {
-            throw new InvalidTypeException("The filters class should return model");
+            throw new InvalidTypeException("The filters class should return builder");
         }
 
         return $query;

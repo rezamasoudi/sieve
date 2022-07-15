@@ -16,6 +16,6 @@ class {{ class }} extends Filter
      */
     public function filter(Request $request, Model $model)
     {
-       // return $model->where("field", "value");
+       return $model;
     }
 }

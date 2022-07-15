@@ -9,7 +9,7 @@ The Sieve is a Laravel framework package to create query filters much more easy 
 
 - [Install package](#install)
 - [Create a filter](#create-a-filter)
-- [Modify model](#modify-model)
+- [Add Filterable trait to model](#add-filterable-trait-to-model)
 - [Add filters to model](#add-filters-to-model)
 
 ## Install
@@ -52,14 +52,17 @@ class IndexPostsFilter extends Filter
 }
 ```
 
-## Modify model
+## Add Filterable trait to model
 
-Extend your model from <font color="#EC407A">Filterable</font> class.
+Use `Filterable` trait at model;
 
 ```php
 use Masoudi\Sieve\Filterable;
 
-class Post extends Filterable { }
+class Post extends Model { 
+    
+    use Filterable;
+ }
 ```
 
 ## Add filters to model

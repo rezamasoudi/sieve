@@ -7,7 +7,7 @@ The Sieve is a Laravel framework package to create query filters much more easy 
 
 
 <p align="center">
-  <img width="460" height="300" src="flow/screenshot.png">
+  <img style="max-width: 100%" width="460" height="auto" src="flow/screenshot.png">
 </p>
 
 ### How to use

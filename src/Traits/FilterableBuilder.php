@@ -3,7 +3,7 @@
 namespace Masoudi\Sieve\Traits;
 
 use Carbon\Exceptions\InvalidTypeException;
-use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Query\Builder;
 use Masoudi\Sieve\Filter;
 
 trait FilterableBuilder
@@ -16,7 +16,7 @@ trait FilterableBuilder
     public function filter(Filter $filter)
     {
         $request = request();
-        $query = $filter->filter($request, $this->model);
+        $query = $filter->filter($request, $this->query);
 
         if (!$query instanceof Builder) {
             throw new InvalidTypeException("The filters class should return builder");

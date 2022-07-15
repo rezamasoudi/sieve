@@ -4,18 +4,20 @@ namespace {{ namespace }};
 
 use Masoudi\Sieve\Filter;
 use Illuminate\Http\Request;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Query\Builder;
 
 class {{ class }} extends Filter
 {
     /**
      * Apply conditions on model
      * 
-     * @param Illuminate\Http\Request $request;
-     * @param Illuminate\Database\Eloquent\Model $model;
+     * @param \Illuminate\Http\Request $request
+     * @param \Illuminate\Database\Query\Builder $builder
+     * 
+     * @return \Illuminate\Database\Query\Builder
      */
-    public function filter(Request $request, Model $model)
+    function filter(Request $request, Builder $builder)
     {
-       return $model;
+       return $builder;
     }
 }

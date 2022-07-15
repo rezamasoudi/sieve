@@ -3,10 +3,9 @@
 namespace Masoudi\Sieve;
 
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Model;
 use Masoudi\Sieve\Support\EloquentBuilder;
 
-class Filterable extends Model
+trait Filterable
 {
     /**
      * Begin querying the model.

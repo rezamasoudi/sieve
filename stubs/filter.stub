@@ -4,7 +4,7 @@ namespace {{ namespace }};
 
 use Masoudi\Sieve\Filter;
 use Illuminate\Http\Request;
-use Illuminate\Database\Query\Builder;
+use Illuminate\Database\Eloquent\Builder;
 
 class {{ class }} extends Filter
 {
@@ -12,9 +12,9 @@ class {{ class }} extends Filter
      * Apply conditions on model
      * 
      * @param \Illuminate\Http\Request $request
-     * @param \Illuminate\Database\Query\Builder $builder
+     * @param \Illuminate\Database\Eloquent\Builder $builder
      * 
-     * @return \Illuminate\Database\Query\Builder
+     * @return \Illuminate\Database\Eloquent\Builder
      */
     function filter(Request $request, Builder $builder)
     {

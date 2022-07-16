@@ -26,6 +26,7 @@ composer require masoudi/laravel-sieve
 ```bash
 php artisan make:filter IndexUsers
 ```
+filters will be create at app/Http/Filters directory
 
 ## Use filterable trait in model
 ```php

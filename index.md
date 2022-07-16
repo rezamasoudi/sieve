@@ -6,6 +6,7 @@ Create filters for your models
 class IndexUsers extends Filter {
   
   function filter(Request $request, Builder $builder) {
+  
     return $builder->where('name', $request->name)->where('role', $request->role);
   }
 }

@@ -1,6 +1,7 @@
 ## Laravel Sieve
 
-Create filters for your models
+Create filters for eloquent models
+
 ```php
 
 class IndexUsers extends Filter {
@@ -14,4 +15,28 @@ class IndexUsers extends Filter {
 // in controller
 User::filter(new IndexUsers)->get();
 
+```
+
+## Install package
+```bash
+composer require masoudi/laravel-sieve
+```
+
+## Generate new filter
+``bash
+php artisan make:filter IndexUsers
+```
+
+## Use filterable trait in model
+```php
+use Masoudi\Sieve\Filterable;
+
+class User extends Model { 
+    
+    use Filterable;
+ }
+```
+## Add filter to model
+```php
+User::filter(new IndexUsers)->get();
 ```

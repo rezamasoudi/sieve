@@ -23,7 +23,7 @@ composer require masoudi/laravel-sieve
 ```
 
 ## Generate new filter
-``bash
+```bash
 php artisan make:filter IndexUsers
 ```
 

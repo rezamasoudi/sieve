@@ -4,6 +4,7 @@ Create filters for eloquent models
 
 ```php
 
+// Filter class
 class IndexUsers extends Filter {
   
   function filter(Request $request, Builder $builder) {
